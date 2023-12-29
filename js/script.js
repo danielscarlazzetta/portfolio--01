@@ -5,7 +5,7 @@ let navbar = document.querySelector('.navbar');
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
-}
+};
 
 /* */
 let sections = document.querySelectorAll('section');
@@ -35,3 +35,15 @@ window.onscroll = () => {
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
+
+ScrollReveal({
+    reset: true,
+    distance: '180px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.home-content h3, .home-content p, .heading', { origin : 'top'});
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin : 'bottom'});
+ScrollReveal().reveal('.home-content h1, .about-img, ', { origin : 'left'});
+ScrollReveal().reveal('.home-content p, .about-content, ', { origin : 'right'});

@@ -182,7 +182,7 @@ span{
     margin-bottom: 5rem;
 }
 
-.serices-container {
+.services-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,7 +190,7 @@ span{
     gap: 2rem;
 }
 
-.serices-container .services-box{
+.services-container .services-box{
     flex: 1 1 30rem;
     background: var(--second-bg-color);
     padding: 3rem 2rem 4rem;
@@ -200,7 +200,7 @@ span{
     transition: .3s ease;
 }
 
-.serices-container .services-box:hover {
+.services-container .services-box:hover {
     border-color: var(--main-color);
     transform: scale(1.02);
 }
@@ -387,6 +387,18 @@ span{
     section{
         padding: 10rem 3% 2rem;
     }
+
+    .services {
+        padding-bottom: 7rem;
+    }
+
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+
+    .contact {
+        min-height: auto;
+    }
     
     .footer{
         padding: 2rem 3%;
@@ -394,11 +406,11 @@ span{
 }
 
 @media (max-width: 768px){
-    #menu-icon{
-        display: none;
+    #menu-icon {
+        display: block;
     }
 
-    .navbar{
+    .navbar {
         position: absolute;
         top: 100%;
         left: 0;
@@ -418,5 +430,96 @@ span{
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+    }
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    
+    .home-img img {
+        width: 50vw;
+        height: 50vw;
+        margin-top: 4rem;
+        animation: floatImage 4s ease-in-out infinite;
+    }
+
+    @keyframes floatImage {
+        0%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY(-2.4rem);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about img {
+        width: 50vw;
+        height: 50vw;
+        margin-top: 4rem;
+    }
+
+    .services {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio h2 {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 617px){
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px){
+    html {
+        font-size: 50%;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 365px){
+    .home-img img {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .about-img img{
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        margin-top: 2rem;
+        text-align: center;
     }
 }
